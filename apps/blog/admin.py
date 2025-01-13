@@ -1,9 +1,9 @@
 from django.contrib import admin
 from .models import Post, Category
-from mptt.admin import DraggableMPTTAdmin
+from django_mptt_admin.admin import DjangoMpttAdmin
 
 @admin.register(Category)
-class CategoryAdmin(DraggableMPTTAdmin):
+class CategoryAdmin(DjangoMpttAdmin):
     """
     Админ-панели модели другой категории
     """
